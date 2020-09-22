@@ -1,0 +1,18 @@
+日志模块主要是仿照muduo的日志模块来的，包括如下几个模块：
+1、AppendFile 
+简单的封装了写文件的API
+
+2、LogFile
+封装AppendFile并加上了锁保护写文件
+
+3、LogBUffer
+封装了一个char buffer
+
+4、LogStream
+提供几个 《 操作符用于简单的写日志操作
+
+5、Logger
+用于单线程的写日志
+
+6、AsynLog
+用于多线程的写日志，其中使用三个buffer以及一个bufferlist来作为缓存
